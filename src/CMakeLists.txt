@@ -8,6 +8,7 @@ target_sources(${EXC_OUT}
         DetectorConstruction.cc
         EventAction.cc
         GlobalConfigs.cc
+        HistoManager.cc
         Materials.cc
         PhysicsList.cc
         PrimaryGeneratorAction.cc

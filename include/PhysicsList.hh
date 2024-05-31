@@ -1,19 +1,19 @@
 #pragma once
 
-#include "QBBC.hh"
+#include "FTFP_BERT.hh"
 #include "G4EmStandardPhysics_option4.hh"
 #include "G4OpticalParameters.hh"
 #include "G4OpticalPhysics.hh"
-#include "G4RadioactiveDecayPhysics.hh"
-#include "G4DecayPhysics.hh"
     
 namespace ImpressForGrips
 {
-class PhysicsList : public QBBC
+class PhysicsList : public FTFP_BERT
 { 
-public:
-    PhysicsList();
-    virtual ~PhysicsList() override;
+    public:
+        PhysicsList();
+        virtual ~PhysicsList() override;
+    private:
+
 };
 }
 

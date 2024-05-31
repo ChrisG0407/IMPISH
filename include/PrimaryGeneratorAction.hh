@@ -1,9 +1,10 @@
 #pragma once
 
 #include "G4VUserPrimaryGeneratorAction.hh"
-#include "globals.hh"
 #include "G4ParticleGun.hh"
+#include "globals.hh"
 
+class G4ParticleGun;
 class G4GeneralParticleSource;
 class G4Event;
 class G4Box;

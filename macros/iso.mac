@@ -1,0 +1,13 @@
+/gps/particle opticalphoton
+
+/gps/pos/centre .25 0 .25 cm
+
+
+/gps/pos/type Point
+/gps/polarization 1 0 0 #Switch this up to see if polariziation affects the number of sipm hits
+
+/gps/ang/type iso
+
+/gps/ene/type Mono
+/gps/ene/mono 3 eV
+/run/beamOn 1000

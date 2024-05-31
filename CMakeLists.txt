@@ -7,8 +7,15 @@ set(EXC_OUT impress2-grips)
 find_package(Geant4 REQUIRED ui_all vis_all)
 include(${Geant4_USE_FILE})
 add_executable(${EXC_OUT} main.cc)
-
 include_directories("${PROJECT_SOURCE_DIR}/include")
+#include_directories(${PROJECT_SOURCE_DIR}/include 
+#                    ${Geant4_INCLUDE_DIR})
+#file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc)
+#file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
+
+#add_executable(particleGun particleGun.cc ${sources} ${headers} )
+#target_link_libraries(particleGun ${Geant4_LIBRARIES} )
+
 
 add_subdirectory(src)
 add_subdirectory(include)
@@ -24,6 +31,18 @@ target_link_libraries(${EXC_OUT} ${Geant4_LIBRARIES})
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/data-out")
 file(CREATE_LINK "${CMAKE_SOURCE_DIR}/macros" "${CMAKE_CURRENT_BINARY_DIR}/macros" SYMBOLIC)
 set(cfg "simulation.config.file")
+
+set(impress_SCRIPTS plotHisto.C)
+
+foreach(_script ${impress_SCRIPTS})
+  configure_file(
+    ${PROJECT_SOURCE_DIR}/${_script}
+    ${PROJECT_BINARY_DIR}/${_script}
+    COPYONLY
+    )
+endforeach()
+#Create histogram script
+#set(impress2_grips_SCRIPTs plotHisto.C)
 file(CREATE_LINK "${CMAKE_SOURCE_DIR}/${cfg}" "${CMAKE_CURRENT_BINARY_DIR}/${cfg}" SYMBOLIC)
 
 add_compile_options(-Wall -Wextra -Wpedantic -pedantic -Werror)

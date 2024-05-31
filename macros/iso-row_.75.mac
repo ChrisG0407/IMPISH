@@ -1,0 +1,34 @@
+/gps/particle opticalphoton
+
+/gps/pos/centre -1.75 0 .75 cm
+
+
+/gps/pos/type Point
+/gps/polarization 1 0 0
+
+/gps/ang/type iso
+
+/gps/ene/type Mono
+/gps/ene/mono 3 eV
+/run/beamOn 100000
+
+/gps/pos/centre -1.25 0 .75 cm
+/run/beamOn 100000
+
+/gps/pos/centre -.75 0 .75 cm
+/run/beamOn 100000
+
+/gps/pos/centre -.25 0 .75 cm
+/run/beamOn 100000
+
+/gps/pos/centre .25 0 .75 cm
+/run/beamOn 100000
+
+/gps/pos/centre .75 0 .75 cm
+/run/beamOn 100000
+
+/gps/pos/centre 1.25 0 .75 cm
+/run/beamOn 100000
+
+/gps/pos/centre 1.75 0 .75 cm
+/run/beamOn 100000

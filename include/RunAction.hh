@@ -5,6 +5,7 @@
 #include "globals.hh"
 
 class G4Run;
+class HistoManager;
 
 namespace ImpressForGrips
 {
@@ -16,5 +17,8 @@ class RunAction : public G4UserRunAction
 
     virtual void BeginOfRunAction(const G4Run*) override;
     virtual void EndOfRunAction(const G4Run*) override;
+    
+  private:
+    HistoManager* fHistoManager;
 };
 }
